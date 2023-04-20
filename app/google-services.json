@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1083524232797",
+    "project_id": "south-east-chemical",
+    "storage_bucket": "south-east-chemical.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083524232797:android:df96cb8d440476531a3fb4",
+        "android_client_info": {
+          "package_name": "com.southeastchemicalfsm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083524232797-0vagqsgg0mvdkj3763c0glean0nnsbq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYlVz4LdZ6BfrlA4K2CZpV1cLr0eiT0_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083524232797-0vagqsgg0mvdkj3763c0glean0nnsbq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

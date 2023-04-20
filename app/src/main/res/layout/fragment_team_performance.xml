@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_light_sky"
+    android:focusable="true"
+    android:clickable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_attend_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_frag_own_perf_attend_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:text="Attendance Report"
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center|start"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="(Last Month)"
+                            android:paddingLeft="@dimen/_2sdp"
+                            android:textSize="@dimen/_9sdp"
+                            android:gravity="center|start"
+                            android:textColor="@color/black" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_share_icon_attend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="#228ba1"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            android:padding="@dimen/_5sdp"
+                            app:cardElevation="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_frag_performance_attenshare"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="@color/white"
+                                android:background="@drawable/ic_share"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:padding="@dimen/_5sdp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_frag_team_performnace_sel_team_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:drawableTint="@color/black"
+                        android:hint="Select Team"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:background="@drawable/simple_border_rec_bg"
+                        android:drawableEnd="@drawable/ic_down_arrow"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center|start" />
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/atten_ll_frag_team_per"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.6"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:background="@drawable/border_background_simple">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:src="@drawable/ic_user_newscr"
+                                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Present"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_frag_own_performance_present_atten"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6"
+                                    android:layout_gravity="end"
+                                    android:gravity="center"
+                                    android:text="14"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold"
+                                    android:background="@drawable/border_background_small_1"
+                                    android:backgroundTint="#0019b2"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:background="@drawable/border_background_simple"
+                                android:layout_marginTop="@dimen/_10sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:src="@drawable/ic_user_newscr"
+                                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Absent"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_frag_own_performance_absent_atten"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6"
+                                    android:layout_gravity="end"
+                                    android:gravity="center"
+                                    android:text="14"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold"
+                                    android:background="@drawable/border_background_small_1"
+                                    android:backgroundTint="#f5862c"/>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="@dimen/_5sdp"
+                            android:layout_height="match_parent" />
+
+
+                        <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+                            android:id="@+id/aa_chart_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                        </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_mtd_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:text="MTD"
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center|start"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="(Month To Date)"
+                            android:paddingLeft="@dimen/_2sdp"
+                            android:textSize="@dimen/_9sdp"
+                            android:gravity="center|start"
+                            android:textColor="@color/black" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_share_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="#228ba1"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            android:padding="@dimen/_5sdp"
+                            app:cardElevation="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_frag_performance_MTDshare"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="@color/white"
+                                android:background="@drawable/ic_share"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:padding="@dimen/_5sdp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_frag_team_performnace_sel_team_member_mtd"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:drawableTint="@color/black"
+                        android:hint="Select Team"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:background="@drawable/simple_border_rec_bg"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center|start" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:background="@drawable/shadow_selector_page">
+
+                            <TextView
+                                android:id="@+id/tv_total_ordervalue_frag_team"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:background="@drawable/shadow_selector_page1">
+
+                            <TextView
+                                android:id="@+id/tv_totalOrdercount_frag_team_performance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:background="@drawable/shadow_selector_page2">
+
+                            <TextView
+                                android:id="@+id/tv_avg_value_frag_team_performance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:backgroundTint="#ef2f0a"
+                            android:background="@drawable/shadow_selector_page3">
+
+                            <TextView
+                                android:id="@+id/tv_avg_orderCount_frag_team_performance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:orientation="horizontal">
+
+                        <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+                            android:id="@+id/aa_chart_view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                        </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--Last 10 order(based on shop type)-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_last10Order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.9"
+                            android:text="Last 10 Orders"
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center|start"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="(based on type of shops)"
+                            android:textSize="@dimen/_9sdp"
+                            android:gravity="center|start"
+                            android:textColor="@color/black" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="#228ba1"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            android:padding="@dimen/_5sdp"
+                            app:cardElevation="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_share_last10"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="@color/white"
+                                android:background="@drawable/ic_share"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:padding="@dimen/_5sdp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_frag_team_performnace_sel_shopType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:drawableTint="@color/black"
+                        android:hint="Select Shop Type"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:background="@drawable/simple_border_rec_bg"
+                        android:drawableEnd="@drawable/ic_down_arrow"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center|start" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:backgroundTint="#4835b3"
+                            android:background="@drawable/shadow_selector_page">
+
+                            <TextView
+                                android:id="@+id/tv_total_ordervalueshopTypewise_frag_team"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Total Order Value"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:backgroundTint="#0ea487"
+                            android:background="@drawable/shadow_selector_page1">
+
+                            <TextView
+                                android:id="@+id/tv_avgOrderValueshopTypewise_frag_team_performance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Avg Order Value"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginLeft="@dimen/_80sdp"
+                            android:backgroundTint="#82a01e"
+                            android:background="@drawable/shadow_selector_page2">
+
+                            <TextView
+                                android:id="@+id/tv_totalOrdercount_shoptypewise_frag_team_performance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Total Order count"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Activity ageing-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_activityageing_frag_own"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.9"
+                            android:gravity="center|start"
+                            android:text="Activity Ageing"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp"
+                            app:cardBackgroundColor="#228ba1"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            app:cardElevation="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_share_activityageing"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:background="@drawable/ic_share"
+                                android:backgroundTint="@color/white"
+                                android:padding="@dimen/_5sdp"
+                                android:scaleType="fitCenter" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_frag_team_performnace_sel_party"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/simple_border_rec_bg"
+                        android:drawableEnd="@drawable/ic_down_arrow"
+                        android:drawableTint="@color/black"
+                        android:gravity="center|start"
+                        android:hint="Select Party"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/border_background_simple"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Last"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Visit"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_frag_team_performance_lastvisitbyago"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:layout_weight="1.6"
+                                android:background="@drawable/border_background_small_1"
+                                android:backgroundTint="#f3090a"
+                                android:gravity="center"
+                                android:text="0 \n Days ago"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/border_background_simple"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Last"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.6"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Order"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_frag_team_performance_lastorderbyago"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:layout_weight="1.6"
+                                android:background="@drawable/border_background_small_1"
+                                android:backgroundTint="#051ba2"
+                                android:gravity="center"
+                                android:text="0 \n Days ago"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/border_background_simple"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Last"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.6"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Collection"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_frag_team_performance_lastcollectionbyago"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:layout_weight="1.6"
+                                android:background="@drawable/border_background_small_1"
+                                android:backgroundTint="#0ca485"
+                                android:gravity="center"
+                                android:text="0 \n Days ago"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/border_background_simple"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Last"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_9sdp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.6"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Login"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_frag_team_performance_lastloginbyago"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:layout_weight="1.6"
+                                android:background="@drawable/border_background_small_1"
+                                android:backgroundTint="#c8810d"
+                                android:gravity="center"
+                                android:text="0 \n Days ago"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Party not Visited Last 20 days-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_partynotvisitedlast20_frag_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:paddingBottom="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.9"
+                            android:gravity="center|start"
+                            android:text="Party Not Visited Last 20 Days "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp"
+                            app:cardBackgroundColor="#228ba1"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            app:cardElevation="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_share_partynotvisitedlast20days"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:background="@drawable/ic_share"
+                                android:backgroundTint="@color/white"
+                                android:padding="@dimen/_5sdp"
+                                android:scaleType="fitCenter" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/frag_team_performance_last20nitvisited_list_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="@dimen/_100sdp"
+                        android:scrollbars="vertical"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/row_party_notvisited_list"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+                <!--Partywise sales-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_party_wise_sales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.9"
+                                android:gravity="center|start"
+                                android:text="Partywise sales"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_3sdp"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp"
+                                app:cardBackgroundColor="#228ba1"
+                                app:cardCornerRadius="@dimen/_15sdp"
+                                app:cardElevation="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:id="@+id/iv_share_partywisesales"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_2sdp"
+                                    android:background="@drawable/ic_share"
+                                    android:backgroundTint="@color/white"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter" />
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_sel_party_multiple_sel_own"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/simple_border_rec_bg"
+                            android:drawableEnd="@drawable/ic_down_arrow"
+                            android:drawableTint="@color/black"
+                            android:gravity="center|start"
+                            android:hint="Select Party"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="@color/white"
+                            android:padding="@dimen/_5sdp"
+                            app:cardElevation="@dimen/_2sdp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:gravity="center"
+                                android:background="@drawable/shadow_selector_page_cus_white"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.5"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Party Name"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.5"
+                                    android:gravity="start|center"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:text="Total Sale value"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+                            android:id="@+id/samplec"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                        </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcv_party_wise_items_own"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:scrollbars="vertical"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+        <ImageView
+            android:id="@+id/iv_loader_spin"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/iv_background_color_set"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_transparent_blue"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/no_data_found_tv_frag_team_performance"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:text="NO Data Found"
+            android:visibility="gone"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/black_50"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>
