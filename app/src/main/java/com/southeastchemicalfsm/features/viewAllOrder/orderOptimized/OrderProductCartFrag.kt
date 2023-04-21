@@ -213,7 +213,7 @@ class OrderProductCartFrag : BaseFragment(), View.OnClickListener{
                         ToasterMiddle.msgShort(mContext,"Please enter valid quantity.")
                         return
                     }
-                    else if(!isValidRate){
+                    else if(!isValidRate && !Pref.IsAllowZeroRateOrder){
                         progrwss_wheel.stopSpinning()
                         ToasterMiddle.msgShort(mContext,"Please enter valid Rate.")
                         return
@@ -226,7 +226,7 @@ class OrderProductCartFrag : BaseFragment(), View.OnClickListener{
 
     private fun saveOrder(){
         Handler().postDelayed(Runnable {
-            if(tv_totalAmt.text.toString().toDouble() !=0.0){
+            if(tv_totalAmt.text.toString().toDouble() !=0.0 || Pref.IsAllowZeroRateOrder){
                 val orderListDetails = OrderDetailsListEntity()
                 orderListDetails.amount = tv_totalAmt.text.toString()
                 orderListDetails.description = ""
